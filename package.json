@@ -1,0 +1,23 @@
+{
+  "name": "dr_mydhili_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamarthRanjanRay/dr-mydhili-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamarthRanjanRay/dr-mydhili-website/issues"
+  },
+  "homepage": "https://github.com/SamarthRanjanRay/dr-mydhili-website#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
