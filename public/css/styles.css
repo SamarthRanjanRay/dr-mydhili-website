@@ -2,25 +2,10 @@ body{
   margin:0;
   padding:0;
 }
-nav{
-  width:100%;
-  overflow:auto;
-  margin:0 auto;
-}
-nav a{
-  float:left;
-  padding-top: 12px;
-  padding-bottom:12px;
-  margin-bottom: 12px;
-  width:25%;
-  text-align: center;
-  background:#dddddd;
-}
 .alignimage{
   display:inline-block;
   float:right;
-  margin-right: 6%;
-  width:40%;
+  width:30%;
 }
 .down{
   margin-top: 20%;
