@@ -1,0 +1,6 @@
+<% base.forEach(function(data){ %>
+  <h3><%= data.title %></h3>
+  <p><%= data.content %></p>
+  <p><%= data.date %></p>
+  <a href="/<%= data._id %>">more info</a>
+<%})%>
