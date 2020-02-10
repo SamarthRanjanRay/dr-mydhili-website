@@ -1,0 +1,67 @@
+body{
+  margin-left: 20px;
+}
+.info{
+
+  float:left;
+}
+h1{
+  float:left;
+  padding:10px;
+}
+h2{
+  float:left;
+    margin-top: 5%;
+  padding:20px;
+}
+p{
+  float:left;
+  margin-left: 20px;
+  padding: 0px 10px;
+}
+
+.main{
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+.image{
+  float:right;
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+.button{
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #F0F0F0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 20px;
+
+}
+.sidenav input {
+position:relative;
+  text-decoration: none;
+  font-size: 8px;
+  color: #818181;
+display: block;
+border-radius: 50%;
+}
+
+.sidenav input {
+  transition-duration: 0.4s;
+}
+
+.sidenav input:active {
+  background-color: #D0D0D0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
