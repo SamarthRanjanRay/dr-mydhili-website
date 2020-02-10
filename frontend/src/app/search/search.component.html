@@ -1,1 +1,44 @@
-<p>search works!</p>
+
+    <div class="main">
+         
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <br>
+            <div class="bb">
+            <h1>{{type}}</h1>
+            <input type="text" name="searchText" id="searchText" [(ngModel)]="searchText">
+            </div>
+          </nav>
+     
+        <div class="sidenav">
+          Filter Results : 
+      <button id="Papers" (click)="makeArr('Papers')">Papers</button>
+      <button id="Conferences" (click)="makeArr('Conferences')">Conferences</button>
+      <button id="Lectures" (click)="makeArr('Lectures')">Lectures</button>
+      <button id="Projects" (click)="makeArr('Projects')">Projects</button>
+      <button id="Courses" (click)="makeArr('Courses')">Courses</button>
+      <button id="Awards" (click)="makeArr('Awards')">Awards</button>
+      <button id="ClassActivities" (click)="makeArr('ClassActivities')">Class Activities</button>
+      <button id="Mentosrhips" (click)="makeArr('Mentorships')">Mentorships</button>
+      <button id="submit" (click)="submitReq()">Submit</button>
+    </div>
+    
+    
+      <div *ngFor="let ele of arrrr | filter : searchText" class="info">
+    
+        <div>
+          <a routerLink="/view/{{ele._id}}"><h2>{{ele.title}}</h2></a>
+          <br>
+          <br>
+        <p>
+        {{ele.description}}</p>
+      <div class="image">
+        {{ele.date}}
+        </div>
+        
+        </div>
+      </div>
+      <div class=button>
+      <button *ngIf="checkAuth()" type="button">Create Report</button>
+      <button *ngIf="checkAuth()" type="button"><a routerLink="/add">Add Component</a></button>
+      </div>
+    </div>

@@ -1,0 +1,12 @@
+
+    <div id="container">
+    <form action="/login" method="POST">
+      <br>
+      <img src="https://png.pngtree.com/svg/20161229/_username_login_1172579.png"><br><br>
+    <label>USERNAME:<br>
+      <input type="text" name="username" placeholder="Username" [(ngModel)]="usn"></label><br>
+    <label>PASSWORD:<br>
+      <input type="password" name="password" placeholder="Password" [(ngModel)]="pass"></label><br><br>
+      <button (click)=loging()><strong>SUBMIT</strong></button>
+    </form>
+    <div>

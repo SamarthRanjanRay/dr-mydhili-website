@@ -1,0 +1,52 @@
+
+      * {box-sizing: border-box;}
+
+      .content {
+        width : 80%;
+        height : auto;
+        margin : auto;
+        margin-top : 3%;
+        padding : 2%;
+        border-left : 1px solid black;
+        border-right : 1px solid black;
+        border-radius : 2%;
+        background : linear-gradient(white, #fcfbc7);
+        box-shadow : 10px 10px 10px 0 black;
+      }
+
+      .slideShow {
+        border : 20px groove grey;
+        border-radius : 2%;
+        width : 70%;
+        position : relative;
+        margin : auto;
+        box-shadow : 10px 10px 10px 0 black;
+      }
+
+
+      .arrow {
+        cursor : pointer;
+        position : absolute;
+        top : 50%;
+        padding : 1%;
+        background : rgba(0,0,0,0);
+        font-size : 15px;
+        color : white;
+        border-radius : 50%;
+      }
+
+      .prev {
+        left : 0;
+      }
+
+      .next {
+        right : 0;
+      }
+
+      .prev:hover, .next:hover, .dot:hover {
+        background : rgba(0,0,0,1);
+      }
+
+      form {
+        text-align: center;
+      }

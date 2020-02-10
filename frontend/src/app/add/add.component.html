@@ -1,0 +1,31 @@
+<form>
+    <label for="title">Title</label>
+    <br>
+    <input type="text" name="title" [(ngModel)]="title" />
+    <br>
+    <label for="date">Date</label>
+    <br>
+    <input type="date" name="date" [(ngModel)]="date" />
+    <br>
+    <label for="content">Content</label>
+    <br>
+    <input type="text" name="content" [(ngModel)]="content" />
+    <br>
+    <label for="desc">Description</label>
+    <br>
+    <input type="text" name="desc" [(ngModel)]="desc" />
+    <br>
+    <label for="field">Field</label>
+    <br>
+    <input type="text" name="field" [(ngModel)]="field" />
+    <br>
+    <label for="imgsrc">Upload More Images</label>
+    <br>
+    <input type="file" name="imgsrc" accept="image/*" (change)="addImage($event.target.files)" multiple="true" />
+    <br>
+    <div *ngFor="let img of imgURL">
+        <img src="{{img}}">
+        <button (click)="removeImage(img)">Remove</button>
+    </div>
+    <input type="submit" name="submit" (click)="upload()">
+</form>

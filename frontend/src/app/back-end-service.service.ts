@@ -1,48 +1,54 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
+import { Objs } from './Objs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackEndServiceService {
-  configUrl = "http://localhost:3000/";
-  obj : Object;
+  configUrl = "http://localhost:2000/";
+  loggedIn : Boolean = true;
 
   constructor(
     private http : HttpClient
   ) { }
 
-  login(usn : String, pass : String) {
-    return this.http.get(this.configUrl+'/login/'+usn+'/'+pass);
+  login(object : Object) {
+    
+    this.http.post(this.configUrl+'login', object).subscribe((data) => {
+      this.loggedIn = Boolean(data);
+    });
+    return this.loggedIn;
   }
 
-  get(para : String[]) {
-    if (para)
-      return this.http.get(this.configUrl+'/get/'+para.toString());
-    else 
-      return this.http.get(this.configUrl+'/getAll');
+  get(object : Object) {
+    return this.http.post(this.configUrl+"all", object);
   }
 
-  postIt(arr : String[]) {
-    this.obj = { array : arr };
-    return this.http.post(this.configUrl+'/post',this.obj).subscribe((data) => {
+  postIt(object : Object) {
+     return this.http.post(this.configUrl, object).subscribe((data) => {
       return data;
     });
   }
 
-  updateIt(arr : String[]) {
-    this.obj = { array : arr };
-    return this.http.patch(this.configUrl+'/patch',this.obj).subscribe((data) => {
+  updateIt(id : String, object : Object) {
+    return this.http.put(this.configUrl+id, object).subscribe((data) => {
       return data;
     });
   }
 
-  deleteIt(id : Number) {
-    return this.http.delete(this.configUrl+'/delete/'+id);
+  deleteIt(id : String) {
+    return this.http.delete(this.configUrl+'delete/'+id).subscribe((data) => {
+      return data
+    });
   }
 
-  getIt(id : Number) {
-    return this.http.get(this.configUrl+'/getOne/'+id);
+  getIt(id : String) : Observable<Objs>{
+    return this.http.get<Objs>(this.configUrl+id);
+  }
+
+  isLoggedIn() {
+    return this.loggedIn;
   }
 }

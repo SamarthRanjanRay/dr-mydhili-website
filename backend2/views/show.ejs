@@ -1,0 +1,9 @@
+
+  <h3><%= base.title %></h3>
+  <p><%= base.content %></p>
+  <p><%= base.date %></p>
+  <p><%= base.description%></p>
+<a href="/<%= base._id%>/edit">edit </a>
+<form action="/<%= base._id%>?_method=DELETE" method="POST">
+  <button>delete</button>
+</form>

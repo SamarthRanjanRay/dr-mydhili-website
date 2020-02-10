@@ -1,0 +1,63 @@
+
+    <div class="content">
+        <h2 style="text-align:center;">{{object.title}}</h2>
+        <h3 style="text-align:right;">{{object.content}}</h3>
+        <p> {{object.desc}}</p>
+        <h3>{{object.field}}</h3>
+          <h3>Gallery</h3>
+          <div class="slideShow">
+            <div *ngFor="let u of imgArr">
+              <div class="slide">
+                <img src="{{u}}" alt="" width="100%">
+              </div>
+            </div>
+            <div class="arrow prev" (click)="changeSlide(-1)">
+              &lt;
+            </div>
+            <div class="arrow next" (click)="changeSlide(1)">
+              &gt;
+            </div>
+          </div>
+        
+      <div *ngIf="login">
+        <button type="button" name="button" (click)="edit()">Edit</button>
+        <button type="button" name="button" (click)="delete()">delete</button>
+      </div>
+
+      <div *ngIf="editing">
+        <br>
+        <form>
+          <label for="title">Title</label>
+          <br>
+          <input type="text" name="title" [(ngModel)]="title" />
+          <br>
+          <label for="date">Date</label>
+          <br>
+          <input type="date" name="date" [(ngModel)]="date" />
+          <br>
+          <label for="content">Content</label>
+          <br>
+          <input type="text" name="content" [(ngModel)]="content" />
+          <br>
+          <label for="desc">Description</label>
+          <br>
+          <input type="text" name="desc" [(ngModel)]="desc" />
+          <br>
+          <label for="field">Field</label>
+          <br>
+          <input type="text" name="field" [(ngModel)]="field" />
+          <br>
+          <label for="imgsrc">Upload More Images</label>
+          <br>
+          <input type="file" name="imgsrc" accept="image/*" (change)="addImage($event.target.files)" multiple="true" />
+          <br>
+          <div *ngFor="let img of imgURL">
+              <img src="{{img}}" width="200px">
+              <button (click)="removeImage(img)">Remove</button>
+          </div>
+          <input type="submit" name="submit" (click)="upload()">
+      </form>
+      </div> 
+      </div>
+      <script>
+      </script>

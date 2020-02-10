@@ -1,0 +1,81 @@
+
+.info{
+  background: lightgray;
+  float:left;
+  width: 100%;
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+}
+
+h1{
+  float:left;
+  padding:10px;
+  display: block;
+}
+h2{
+  float:left;
+  padding:20px;
+  display: block;
+}
+p{
+  display: block;
+  float:left;
+  margin-left: 20px;
+  padding: 0px 10px;
+}
+
+.main{
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+.image{
+  float:right;
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+input{
+  margin-top: 80px;
+  display: block;
+}
+.sidenav {
+  height: 70px;
+  position: relative;
+  top: 25px;
+  background-color: #F0F0F0;
+  overflow-x: hidden;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.sidenav button {
+position:relative;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+display: inline;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.sidenav button {
+  transition-duration: 0.4s;
+}
+
+.sidenav button:active {
+  background-color: #D0D0D0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.active {
+  background-color: #D0D0D0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+[id="Papers"] {
+  margin-left: 20px;
+}
+
+[id="submit"] {
+  margin-left: 150px;
+}
